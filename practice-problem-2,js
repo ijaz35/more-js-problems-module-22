@@ -1,0 +1,19 @@
+// কোন একটা সংখ্যা প্রাইম সংখ্যা (prime number) কিনা। সেটা চেক করার একটা ফাংশন লিখো। 
+
+
+function findPrime(number) {
+    var array = [];
+    for (var i = 1; i <= number; i++) {
+        if (number % i == 0) {
+            array.push(i);
+        }
+    }
+    if (array.length <= 2) {
+        return 'this is a prime number';
+    } else {
+        return 'this is not a prime number';
+    }
+}
+var myNumber = 11;
+var primeCheck = findPrime(myNumber);
+console.log(primeCheck);
